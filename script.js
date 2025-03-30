@@ -14,9 +14,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const square = document.createElement('div');
             square.style.width = `${squareSize}px`;
             square.style.height = `${squareSize}px`;
+            square.style.opacity = 0; // Start with transparent
 
             square.addEventListener('mouseover', () => {
-                square.style.backgroundColor = 'blue'; // Change to desired color
+                // Generate a random RGB color
+                const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+                
+                // Apply random color and increment opacity
+                square.style.backgroundColor = randomColor;
+                square.style.opacity = Math.min(parseFloat(square.style.opacity) + 0.1, 1);
             });
 
             container.appendChild(square);
