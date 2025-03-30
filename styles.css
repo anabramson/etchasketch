@@ -1,0 +1,22 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 256px; /* 16 squares of 16px each */
+    height: 256px; /* 16 squares of 16px each */
+}
+
+.container div {
+    width: 16px;
+    height: 16px;
+    box-sizing: border-box; /* Ensures padding and border don't affect size */
+    border: 1px solid #000;
+}
